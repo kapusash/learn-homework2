@@ -8,21 +8,17 @@
 * Превратите строку "01/01/17 12:10:03.234567" в объект datetime
 
 """
+import datetime
 
 def print_days():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
-    
-    
+    print(datetime.date.today())
+    print(datetime.date.today() - datetime.timedelta(days=1))
+    print(datetime.date.today() + datetime.timedelta(days=1))
+
 def str_2_datetime(string):
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+
+    dt_parser = datetime.datetime.strptime(string,"%d/%m/%y %H:%M:%S.%f")
+    return dt_parser
 
 if __name__ == "__main__":
     print_days()
